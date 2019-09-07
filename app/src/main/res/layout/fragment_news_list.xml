@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-    <com.example.chenguo.RefreshLayout
+    <com.java.chenguo.RefreshLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +18,7 @@
             android:divider="@color/color_DimGray"
             android:dividerHeight="12px"/>
 
-    </com.example.chenguo.RefreshLayout>
+    </com.java.chenguo.RefreshLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"

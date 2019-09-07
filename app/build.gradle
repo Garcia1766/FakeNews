@@ -10,7 +10,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.chenguo"
+        applicationId "com.java.chenguo"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

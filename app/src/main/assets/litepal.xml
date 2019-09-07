@@ -5,14 +5,14 @@
     <version value="51"></version>
 
     <list>
-        <mapping class="com.example.chenguo.DataGet.OneNewsD"></mapping>
-        <mapping class="com.example.chenguo.DataBase.FavHistory"></mapping>
-        <mapping class="com.example.chenguo.DataBase.ReadHistory"></mapping>
-        <mapping class="com.example.chenguo.DataBase.UserTopMenu"></mapping>
-        <mapping class="com.example.chenguo.DataBase.UserTopMenuOthers"></mapping>
-        <mapping class="com.example.chenguo.DataBase.SearchHistory"></mapping>
-        <mapping class="com.example.chenguo.DataBase.UserKeyword"></mapping>
-        <mapping class="com.example.chenguo.DataBase.UserDKKeyword"></mapping>
-        <mapping class="com.example.chenguo.DataBase.User"></mapping>
+        <mapping class="com.java.chenguo.DataGet.OneNewsD"></mapping>
+        <mapping class="com.java.chenguo.DataBase.FavHistory"></mapping>
+        <mapping class="com.java.chenguo.DataBase.ReadHistory"></mapping>
+        <mapping class="com.java.chenguo.DataBase.UserTopMenu"></mapping>
+        <mapping class="com.java.chenguo.DataBase.UserTopMenuOthers"></mapping>
+        <mapping class="com.java.chenguo.DataBase.SearchHistory"></mapping>
+        <mapping class="com.java.chenguo.DataBase.UserKeyword"></mapping>
+        <mapping class="com.java.chenguo.DataBase.UserDKKeyword"></mapping>
+        <mapping class="com.java.chenguo.DataBase.User"></mapping>
     </list>
 </litepal>
