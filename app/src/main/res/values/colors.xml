@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F08080</color> <!--原来是#008577-->
+    <color name="colorPrimaryDark">#F08080</color> <!--原来是#00574B-->
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_MediumVioletRed">#C71585</color>
+    <color name="color_HotPink">#FF69B4</color>
+    <color name="color_MistyRose">#FFE4E1</color>
+    <color name="color_White">#FFFFFF</color>
+    <color name="color_Snow">#FFFAFA</color>
+    <color name="color_MidnightBlue">#191970</color>
+    <color name="color_Yellow">#FFFF00</color>
+    <color name="color_Gray">#778899</color>
+    <color name="color_DimGray">#696969</color>
+    <color name="color_Silver">#C0C0C0</color>
+    <color name="color_DarkGray">#A9A9A9</color>
+    <color name="color_WhiteSmoke">#F5F5F5</color>
+    <color name="color_Black">#000000</color>
+    <color name="color_icon_standard">#323232</color>
+    <color name="color_icon_standard_for_login">#F08080</color>
+    <color name="colorPrimaryDark_for_login">#F08080</color>
+    <color name="color_ab_White">#FFFFFF</color>
+    <color name="color_AlmostBlack">#0F0F0F</color>
+    <color name="transparent"></color>
+</resources>

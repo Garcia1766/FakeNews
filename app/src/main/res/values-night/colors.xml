@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2F2F2F</color> <!--深灰色-->
+    <color name="colorPrimaryDark">#4F4F4F</color> <!--中度灰-->
+    <color name="colorAccent">#008080</color><!--水鸭-->
+    <color name="color_MediumVioletRed">#5F9EA0</color> <!--军校蓝-->
+    <color name="color_HotPink">#2F4F4F</color><!--深石板灰-->
+    <color name="color_MistyRose">#008B8B</color><!--深青-->
+    <color name="color_White">#1F1F1F</color><!--更深的灰色-->
+    <color name="color_Snow">#FFFAFA</color>
+    <color name="color_MidnightBlue">#191970</color>
+    <color name="color_Yellow">#FFFF00</color>
+    <color name="color_Gray">#778899</color>
+    <color name="color_DimGray">#696969</color>
+    <color name="color_Silver">#C0C0C0</color>
+    <color name="color_DarkGray">#F0F0F0</color><!--浅白色-->
+    <color name="color_WhiteSmoke">#F5F5F5</color>
+    <color name="color_Black">#FFFFFF</color><!--白色-->
+    <color name="color_icon_standard">#FFFFFF</color><!--白色-->
+    <color name="color_icon_standard_for_login">#FFFFFF</color>
+    <color name="colorPrimaryDark_for_login">#FFFFFF</color>
+    <color name="color_ab_White">#FFFFFF</color>
+    <color name="color_AlmostBlack">#B0B0B0</color>
+    <color name="transparent"></color>
+</resources>

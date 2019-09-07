@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">陈果_News</string>
+    <string name="navigation_drawer_open">test1</string>
+    <string name="navigation_drawer_close">test2</string>
+    <string name="weixin_id">wxca5a78288f90b99c</string>
+    <string name="weixin_secret">wxca5a78288f90b99c</string>
+    <string name="tencent_qq_appid">1109836648</string>
+</resources>

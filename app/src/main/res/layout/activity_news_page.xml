@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_page_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_White"
+    tools:context=".NewsPageActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/news_page_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        app:titleTextColor="@color/color_White"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ToolbarPopupTheme" />
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/news_page_tool_bar"
+        android:layout_above="@id/news_page_down"
+        android:id="@+id/news_page_main">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="22dp"
+                    android:textColor="@color/color_Black"
+                    android:id="@+id/news_page_title" />
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/news_page_title"
+                    android:id="@+id/news_page_au_and_ti"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/news_page_author"
+                        android:textColor="@color/color_Black"
+                        android:textStyle="bold"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/news_page_author"
+                        android:textColor="@color/color_DarkGray"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/news_page_time"
+                        android:textSize="14dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/news_page_videos"
+                    android:layout_below="@id/news_page_au_and_ti"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/news_page_pics"
+                    android:layout_below="@id/news_page_videos"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/news_page_text"
+                    android:layout_below="@id/news_page_pics"
+                    android:textSize="16dp"
+                    android:textColor="@color/color_Black"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"/>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/news_page_down"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/news_page_comment_button"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:id="@+id/news_page_comment_icon"
+                android:src="@drawable/ic_mode_comment"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#9A9A9A"
+                android:textSize="14sp"
+                android:layout_below="@id/news_page_comment_icon"
+                android:layout_marginTop="2dp"
+                android:layout_centerHorizontal="true"
+                android:text="23"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/detail_page_do_comment"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_toLeftOf="@id/news_page_comment_button"
+            android:textColor="#B6B6B6"
+            android:textSize="12sp"
+            android:text="说点什么吧..."
+            android:background="@drawable/selector_comment_bt"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="22dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

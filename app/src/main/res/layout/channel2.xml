@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/channel_root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_White">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="27dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        android:id="@+id/channel_top_2">
+
+        <TextView
+            android:id="@+id/channel_category_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增删分类"
+            android:textColor="@color/color_AlmostBlack"
+            android:textSize="21dp" />
+
+        <TextView
+            android:id="@+id/channel_category_tip_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_toRightOf="@id/channel_category_text2"
+            android:textColor="@color/color_AlmostBlack"
+            android:layout_alignParentBottom="true"
+            android:text="单击或长按进行增删/排序"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/channel_category_close2"
+            android:src="@drawable/ic_clear_deepgray"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/channel_category_reset2"
+            android:src="@drawable/ic_reset"
+            android:layout_toLeftOf="@id/channel_category_close2"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+    <com.cheng.channel.ChannelView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/channel_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/channel_top_2"/>
+
+</RelativeLayout>

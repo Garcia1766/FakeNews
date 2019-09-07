@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout="@layout/custom_preference">
+
+    <SwitchPreference
+        android:key="night_mod"
+        android:title="夜间模式"
+        android:defaultValue="false"
+        android:layout="@layout/custom_preference"/>
+
+    <Preference
+        android:key="clear_hot"
+        android:title="清除喜好词"
+        android:layout="@layout/custom_preference" />
+
+    <Preference
+        android:key="clear_dkhot"
+        android:title="清除屏蔽词"
+        android:layout="@layout/custom_preference" />
+
+
+</PreferenceScreen>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/channel_root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_White">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="27sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="14sp"
+        android:orientation="horizontal"
+        android:id="@+id/set_his_top">
+
+        <TextView
+            android:id="@+id/set_his_top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除历史记录"
+            android:textColor="@color/color_Black"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/set_his_top_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_toRightOf="@id/set_his_top_text"
+            android:textColor="@color/color_Black"
+            android:layout_alignParentBottom="true"
+            android:text="单击选中多条，点击右下角一并删除"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/set_his_close"
+            android:src="@drawable/ic_clear_deepgray"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10sp"/>
+
+
+    </RelativeLayout>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/search_history_tfl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/set_his_top"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        app:max_select="-1"
+        />
+
+    <ImageView
+        android:id="@+id/set_his_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_delete_deepgray"
+        android:layout_below="@id/search_history_tfl"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>

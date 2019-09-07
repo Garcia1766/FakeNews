@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <com.example.chenguo.RefreshLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_White"
+        android:id="@+id/refresh_layout">
+
+        <ListView
+            android:id="@+id/list_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/color_DimGray"
+            android:dividerHeight="12px"/>
+
+    </com.example.chenguo.RefreshLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_404"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/list_404_text"
+            android:text="没有网络连接...QAQ\n   要不要...连个网？"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="40dp"
+            android:textColor="@color/color_Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/list_404_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/list_404_text"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_refresh_deepgray"/>
+
+        <TextView
+            android:id="@+id/list_404_tip"
+            android:text="轻触重试"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_404_refresh"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/color_Black" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

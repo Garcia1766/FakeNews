@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="BookStore"></dbname>
+
+    <version value="51"></version>
+
+    <list>
+        <mapping class="com.example.chenguo.DataGet.OneNewsD"></mapping>
+        <mapping class="com.example.chenguo.DataBase.FavHistory"></mapping>
+        <mapping class="com.example.chenguo.DataBase.ReadHistory"></mapping>
+        <mapping class="com.example.chenguo.DataBase.UserTopMenu"></mapping>
+        <mapping class="com.example.chenguo.DataBase.UserTopMenuOthers"></mapping>
+        <mapping class="com.example.chenguo.DataBase.SearchHistory"></mapping>
+        <mapping class="com.example.chenguo.DataBase.UserKeyword"></mapping>
+        <mapping class="com.example.chenguo.DataBase.UserDKKeyword"></mapping>
+        <mapping class="com.example.chenguo.DataBase.User"></mapping>
+    </list>
+</litepal>

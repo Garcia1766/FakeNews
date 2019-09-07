@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/search_layout"
+    android:background="@color/color_White">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/search_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        app:titleTextColor="@color/color_White"
+        android:background="@color/colorPrimary"
+        />
+
+
+    <com.example.chenguo.RefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/search_refresh_layout"
+        android:layout_below="@id/search_tool_bar">
+
+        <ListView
+            android:id="@+id/search_list_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.example.chenguo.RefreshLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_refresh_layout"
+        android:id="@+id/search_history">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_his_top"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/search_text"
+                android:text="搜索历史"
+                android:textColor="@color/color_Black"
+                android:textSize="16dp"
+                android:layout_alignParentLeft="true"/>
+
+            <ImageView
+                android:id="@+id/search_delete_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_delete_deepgray"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                android:layout_alignParentRight="true"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/search_history_tfl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_his_top"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
+            app:max_select="1"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_404"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/list_404_text"
+            android:text="没有网络连接...QAQ\n   要不要...连个网？"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="40dp"
+            android:textColor="@color/color_Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/list_404_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/list_404_text"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_refresh_deepgray"/>
+
+        <TextView
+            android:id="@+id/list_404_tip"
+            android:text="轻触重试"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_404_refresh"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/color_Black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

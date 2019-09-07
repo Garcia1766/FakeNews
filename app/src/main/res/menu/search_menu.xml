@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:id="@+id/search_back"
+        android:title="返回"
+        android:icon="@drawable/ic_arrow_back_white"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/search_search"
+        android:title="search"
+        android:icon="@drawable/ic_search_white"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/search_test"
+        android:enabled="false"
+        android:title=""
+        app:showAsAction="always"/>
+
+</menu>

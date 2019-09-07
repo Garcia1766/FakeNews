@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.example.chenguo"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                qq_id: "123456789"
+        ]
+    }
+
+    signingConfigs {
+        release {
+            File strFile = new File("../jks/SigmaLethe.jks")
+            storeFile file(strFile)
+            storePassword "SigmaLethe1234"
+            keyPassword "SigmaLethe1234"
+            keyAlias "SigmaLethe"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true   //是否代码混淆
+            multiDexEnabled true //防止方法数量超过65536导致错误
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.preference:preference:1.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation 'org.litepal.android:java:3.0.0'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.github.chengzhicao:ChannelView:v1.0.9'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'cn.jzvd:jiaozivideoplayer:7.0.5'
+    implementation ('com.xyzlf.share:sharesdk:0.0.11') {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_White">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/store_history_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        app:titleTextColor="@color/color_White"
+        android:background="@color/colorPrimary"
+        />
+
+    <ListView
+        android:id="@+id/store_history_list_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/store_history_tool_bar"/>
+
+</RelativeLayout>
