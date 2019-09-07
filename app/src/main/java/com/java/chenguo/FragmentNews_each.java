@@ -56,6 +56,8 @@ public class FragmentNews_each extends Fragment {
 
     private GrabData get_data;
 
+    private boolean isloading = false;
+
     public View view;
 
     public FragmentNews_each() {
@@ -292,6 +294,11 @@ public class FragmentNews_each extends Fragment {
                     return;
                 }
 
+                if(isloading)
+                    return;
+
+                isloading = true;
+
                 listNews.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -301,11 +308,13 @@ public class FragmentNews_each extends Fragment {
                         getData(20, false, end_time);
                         Toast.makeText(getContext(), "刷新完成！", Toast.LENGTH_SHORT).show();
                         //adapter.notifyDataSetChanged();
-
+                        isloading = false;
                         refresher.setRefreshing(false);
                     }
 
                 }, 1500);
+
+
             }
         });
 
@@ -339,6 +348,11 @@ public class FragmentNews_each extends Fragment {
                     return;
                 }
 
+                if(isloading)
+                    return;
+
+                isloading = true;
+
                 listNews.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -352,8 +366,11 @@ public class FragmentNews_each extends Fragment {
                             Toast.makeText(getContext(), "已经到底了噢", Toast.LENGTH_SHORT).show();
                         //adapter.notifyDataSetChanged();
                         refresher.setLoading(false);
+                        isloading = false;
                     }
                 }, 1500);
+
+
             }
 
             @Override

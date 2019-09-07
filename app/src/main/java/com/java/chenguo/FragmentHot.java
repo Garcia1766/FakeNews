@@ -56,6 +56,8 @@ public class FragmentHot extends Fragment {
 
     View view;
 
+    boolean isloading = false;
+
     final static int READREQUEST = 199;
     final static int READRESULT = 0;
 
@@ -210,6 +212,11 @@ public class FragmentHot extends Fragment {
                     return;
                 }
 
+                if(isloading)
+                    return;
+
+                isloading = true;
+
                 //不断网的情况
                 listNews.postDelayed(new Runnable() {
                     @Override
@@ -219,6 +226,7 @@ public class FragmentHot extends Fragment {
                         adapter.notifyDataSetChanged();
                         getData(end_time, 20, adapter, false);
                         Toast.makeText(getContext(), "新热榜推荐！", Toast.LENGTH_SHORT).show();
+                        isloading = false;
                         refresher.setRefreshing(false);
                     }
 
@@ -255,6 +263,11 @@ public class FragmentHot extends Fragment {
                     return;
                 }
 
+                if(isloading)
+                    return;
+
+                isloading = true;
+
                 //不断网的情况
                 listNews.postDelayed(new Runnable() {
                     @Override
@@ -268,9 +281,12 @@ public class FragmentHot extends Fragment {
                         else if (old_size == new_size)
                             Toast.makeText(getContext(), "已经到底了噢", Toast.LENGTH_SHORT).show();
                         //adapter.notifyDataSetChanged();
+                        isloading = false;
                         refresher.setLoading(false);
                     }
                 }, 1500);
+
+
             }
 
             @Override

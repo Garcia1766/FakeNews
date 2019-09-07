@@ -72,6 +72,8 @@ public class SearchActivity extends AppCompatActivity {
 
     private String username;
 
+    boolean isloading = false;
+
     static final int CHANNELREQUEST = 499;
     static final int CHANNELRESULT = 0;
 
@@ -302,6 +304,11 @@ public class SearchActivity extends AppCompatActivity {
                             return;
                         }
 
+                        if(isloading)
+                            return;
+
+                        isloading = true;
+
                         listNews.postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -310,6 +317,7 @@ public class SearchActivity extends AppCompatActivity {
                                 get_data.sendRequestWithOkHttp(String.valueOf(20), "", topRefresh(), ss, "", SearchActivity.this, adapter, false, false, username);
                                 adapter.notifyDataSetChanged();
                                 Toast.makeText(getApplicationContext(), "刷新完成！", Toast.LENGTH_SHORT).show();
+                                isloading = false;
                                 refresher.setRefreshing(false);
                             }
 
@@ -349,6 +357,11 @@ public class SearchActivity extends AppCompatActivity {
                             return;
                         }
 
+                        if(isloading)
+                            return;
+
+                        isloading = true;
+
                         listNews.postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -360,7 +373,7 @@ public class SearchActivity extends AppCompatActivity {
                                 else if (old_size == new_size)
                                     Toast.makeText(SearchActivity.this, "已经到底了噢", Toast.LENGTH_SHORT).show();
 
-
+                                isloading = false;
 
                                 adapter.notifyDataSetChanged();
                                 refresher.setLoading(false);
